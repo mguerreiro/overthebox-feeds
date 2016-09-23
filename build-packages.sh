@@ -13,5 +13,5 @@ rsync -a ./ sdk/package/overthebox/ --exclude=sdk --exclude=.git
 
 rm -fr sdk/bin/*
 
-make -C sdk defconfig
+make -C sdk defconfig -j1 V=s
 make -C sdk world
