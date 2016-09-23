@@ -3,8 +3,8 @@ set -e
 
 SDK_URL="http://downloads.overthebox.ovh/trunk/x86/64/OpenWrt-SDK-x86-64_gcc-4.8-linaro_glibc-2.21.Linux-x86_64.tar.bz2"
 
-if [ ! -d sdk ]; then
-    mkdir sdk
+if [ ! -d sdk/dl ]; then
+    mkdir -p sdk
     curl ${SDK_URL} | tar jx -C sdk --strip-components 1
 fi
 
